@@ -27,6 +27,8 @@ while running:
 	
 	# Clear the screen with black
 	screen.fill((0, 0, 0))
+
+	pg.draw.circle(screen, (255, 0, 0), (400, 300), 50)
 	
 	# Update the window graphics (Flips the double buffer)
 	pg.display.flip()
