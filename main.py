@@ -19,6 +19,10 @@ peacock = Bird((0, 0, 255))
 running = True
 while running:
 
+	# Limit the framerate to 60fps
+	dt = clock.tick(60)
+	dt /= 1000
+
 	# Loop through all the events like closing, mouse click, key press, etc.
 	for event in pg.event.get():
 		if event.type == pg.QUIT:
@@ -39,9 +43,6 @@ while running:
 
 	# Update the window graphics (Flips the double buffer)
 	pg.display.flip()
-
-	# Limit the framerate to 60fps
-	dt = clock.tick(60)
 
 	# Update the physics of the bird
 	peacock.update(dt)
